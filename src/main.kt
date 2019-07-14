@@ -3,6 +3,8 @@ import java.util.*
 import table.*
 import java.lang.Exception
 
+const val ZERO = '0'
+
 fun main(){
     do{
         greetings()
@@ -41,7 +43,7 @@ fun playGame() {
 
 fun gameStats(player: Player, computer: Computer, table: Table) {
     println("""
-        Your hand: ${player.hand.first.rank}${player.hand.first.suit} ${player.hand.second.rank}${player.hand.second.suit}
+        Your hand: ${if (player.hand.first.rank == '1') "${player.hand.first.rank}0" else player.hand.first.rank}${player.hand.first.suit} ${if (player.hand.second.rank == '1') "${player.hand.second.rank}0" else player.hand.second.rank}${player.hand.second.suit}
         Your balance is: ${player.balance} Computer balance is: ${computer.balance}
         Total bet is: ${table.totalBet}
     """.trimIndent())

@@ -10,7 +10,7 @@ const val DEFAULT_COMPUTER_MONEY = 1000
 
 open class Player {
     open var balance = getSavedBalance()
-    open var hand = Pair(first = Card(),second =  Card())
+    open var hand = Pair(first = Card(),second = Card())
     private fun getSavedBalance(): Int{
         val reader = File("D:/Poker/src/playerInfo/PlayerBalance.txt").bufferedReader()
         return reader.readLine().toInt()
