@@ -37,7 +37,6 @@ fun playGame() {
     table.defineWinner(player, computer)
 
     player.saveBalance()
-
 }
 
 fun gameStats(player: Player, computer: Computer, table: Table) {

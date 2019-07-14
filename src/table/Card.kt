@@ -47,7 +47,7 @@ class Card {
             else -> throw Exception("Error in rank name system")
         }
     }
-    
+
 }
 
 

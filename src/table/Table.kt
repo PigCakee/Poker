@@ -175,7 +175,225 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
                         secondPairCount = firstPairCount
                         secondPos = firstPos
                         firstPairCount = 1
-                    } else return Pair(true, if (list[firstPos] > list[secondPos]) list[firstPos] else list[secondPos])
+                    } else if (firstPairCount == 2){
+                        return Pair(true, if (list[firstPos] > list[secondPos]) list[firstPos] else list[secondPos])
+                    }
+                }
+            }
+        }
+        return Pair(false, null)
+    }
+
+    fun <T> isFullHouse(player: T): Pair<Boolean, Int?>{
+        var firstPairCount = 1
+        var secondPairCount = 1
+        if (player is Player){
+            val list = mutableListOf(player.hand.first.rank.getCardRank(),
+                player.hand.second.rank.getCardRank(),
+                this.cardsOnTable[0]!!.rank.getCardRank(),
+                this.cardsOnTable[1]!!.rank.getCardRank(),
+                this.cardsOnTable[2]!!.rank.getCardRank(),
+                this.cardsOnTable[3]!!.rank.getCardRank(),
+                this.cardsOnTable[4]!!.rank.getCardRank())
+            list.sort()
+            for (i in 0 until list.size - 1){
+                if (list[i] == list[i + 1]) {
+                    firstPairCount++
+                }
+                else {
+                    if (secondPairCount == 1 && firstPairCount == 3) {
+                        secondPairCount = firstPairCount
+                        firstPairCount = 1
+                    } else if (secondPairCount == 3 && firstPairCount == 2) return Pair(true, null)
+                    if (secondPairCount == 1 && firstPairCount == 2) {
+                        secondPairCount = firstPairCount
+                        firstPairCount = 1
+                    } else if (secondPairCount == 2 && firstPairCount == 3) return Pair(true, null)
+                }
+            }
+        }
+        if (player is Computer){
+            val list = mutableListOf(player.hand.first.rank.getCardRank(),
+                player.hand.second.rank.getCardRank(),
+                this.cardsOnTable[0]!!.rank.getCardRank(),
+                this.cardsOnTable[1]!!.rank.getCardRank(),
+                this.cardsOnTable[2]!!.rank.getCardRank(),
+                this.cardsOnTable[3]!!.rank.getCardRank(),
+                this.cardsOnTable[4]!!.rank.getCardRank())
+            list.sort()
+            for (i in 0 until list.size - 1){
+                if (list[i] == list[i + 1]) {
+                    firstPairCount++
+                }
+                else {
+                    if (secondPairCount == 1 && firstPairCount == 3) {
+                        secondPairCount = firstPairCount
+                        firstPairCount = 1
+                    } else if (secondPairCount == 3 && firstPairCount == 2) return Pair(true, null)
+                    if (secondPairCount == 1 && firstPairCount == 2) {
+                        secondPairCount = firstPairCount
+                        firstPairCount = 1
+                    } else if (secondPairCount == 2 && firstPairCount == 3) return Pair(true, null)
+                }
+            }
+        }
+        return Pair(false, null)
+    }
+
+    fun <T> isStraight(player: T): Pair<Boolean, Int?>{
+        if (player is Player){
+            val list = mutableListOf(player.hand.first.rank.getCardRank(),
+                player.hand.second.rank.getCardRank(),
+                this.cardsOnTable[0]!!.rank.getCardRank(),
+                this.cardsOnTable[1]!!.rank.getCardRank(),
+                this.cardsOnTable[2]!!.rank.getCardRank(),
+                this.cardsOnTable[3]!!.rank.getCardRank(),
+                this.cardsOnTable[4]!!.rank.getCardRank())
+            list.sort()
+            var counter = 1
+            var highestCard = 0
+            for (i in 0 until list.size - 1){
+                for (j in i until list.size - 1){
+                    if (counter == 5) return Pair(true, highestCard)
+                    if (list[j] + 1 == list[j + 1]) {
+                        counter++
+                        highestCard = j
+                    } else counter = 1
+                }
+            }
+        }
+        if (player is Computer){
+            val list = mutableListOf(player.hand.first.rank.getCardRank(),
+                player.hand.second.rank.getCardRank(),
+                this.cardsOnTable[0]!!.rank.getCardRank(),
+                this.cardsOnTable[1]!!.rank.getCardRank(),
+                this.cardsOnTable[2]!!.rank.getCardRank(),
+                this.cardsOnTable[3]!!.rank.getCardRank(),
+                this.cardsOnTable[4]!!.rank.getCardRank())
+            list.sort()
+            var counter = 1
+            var highestCard = 0
+            for (i in 0 until list.size - 1){
+                for (j in i until list.size - 1){
+                    if (counter == 5) return Pair(true, highestCard)
+                    if (list[j] + 1 == list[j + 1]) {
+                        counter++
+                        highestCard = list[j]
+                    } else counter = 1
+                }
+            }
+        }
+        return Pair(false, null)
+    }
+
+    fun <T> isFlush(player: T): Pair<Boolean, Int?> {
+        if (player is Player) {
+            val list = mutableListOf(
+                player.hand.first.suit,
+                player.hand.second.suit,
+                this.cardsOnTable[0]!!.suit,
+                this.cardsOnTable[1]!!.suit,
+                this.cardsOnTable[2]!!.suit,
+                this.cardsOnTable[3]!!.suit,
+                this.cardsOnTable[4]!!.suit
+            )
+            list.sort()
+            var counter = 1
+            for (i in 0 until list.size - 1){
+                if (counter == 5) return Pair(true, if (player.hand.first.rank.getCardRank() > player.hand.second.rank.getCardRank()) player.hand.first.rank.getCardRank() else player.hand.second.rank.getCardRank())
+                if (list[i] == list[i + 1]) counter++
+            }
+        }
+        if (player is Computer){
+            val list = mutableListOf(
+                player.hand.first.suit,
+                player.hand.second.suit,
+                this.cardsOnTable[0]!!.suit,
+                this.cardsOnTable[1]!!.suit,
+                this.cardsOnTable[2]!!.suit,
+                this.cardsOnTable[3]!!.suit,
+                this.cardsOnTable[4]!!.suit
+            )
+            list.sort()
+            var counter = 1
+            for (i in 0 until list.size - 1){
+                if (counter == 5) return Pair(true, if (player.hand.first.rank.getCardRank() > player.hand.second.rank.getCardRank()) player.hand.first.rank.getCardRank() else player.hand.second.rank.getCardRank())
+                if (list[i] == list[i + 1]) counter++
+            }
+        }
+        return Pair(false, null)
+    }
+
+    fun <T> isStraightFlush(player: T): Pair<Boolean, Int?>{
+        if (player is Player){
+            val list = mutableListOf(player.hand.first.rank.getCardRank(),
+                player.hand.second.rank.getCardRank(),
+                this.cardsOnTable[0]!!.rank.getCardRank(),
+                this.cardsOnTable[1]!!.rank.getCardRank(),
+                this.cardsOnTable[2]!!.rank.getCardRank(),
+                this.cardsOnTable[3]!!.rank.getCardRank(),
+                this.cardsOnTable[4]!!.rank.getCardRank())
+            list.sort()
+            var counter = 1
+            for (i in 0 until list.size - 1){
+                for (j in i until list.size - 1){
+                    if (counter == 5) break
+                    if (list[j] + 1 == list[j + 1]) {
+                        counter++
+                    } else counter = 1
+                }
+            }
+            if (counter == 5){
+                val suitList = mutableListOf(
+                    player.hand.first.suit,
+                    player.hand.second.suit,
+                    this.cardsOnTable[0]!!.suit,
+                    this.cardsOnTable[1]!!.suit,
+                    this.cardsOnTable[2]!!.suit,
+                    this.cardsOnTable[3]!!.suit,
+                    this.cardsOnTable[4]!!.suit
+                )
+                list.sort()
+                var counterSuit = 1
+                for (i in 0 until suitList.size - 1){
+                    if (counterSuit == 5) return Pair(true, if (player.hand.first.rank.getCardRank() > player.hand.second.rank.getCardRank()) player.hand.first.rank.getCardRank() else player.hand.second.rank.getCardRank())
+                    if (suitList[i] == suitList[i + 1]) counterSuit++
+                }
+            }
+        }
+        if (player is Computer){
+            val list = mutableListOf(player.hand.first.rank.getCardRank(),
+                player.hand.second.rank.getCardRank(),
+                this.cardsOnTable[0]!!.rank.getCardRank(),
+                this.cardsOnTable[1]!!.rank.getCardRank(),
+                this.cardsOnTable[2]!!.rank.getCardRank(),
+                this.cardsOnTable[3]!!.rank.getCardRank(),
+                this.cardsOnTable[4]!!.rank.getCardRank())
+            list.sort()
+            var counter = 1
+            for (i in 0 until list.size - 1){
+                for (j in i until list.size - 1){
+                    if (counter == 5) break
+                    if (list[j] + 1 == list[j + 1]) {
+                        counter++
+                    } else counter = 1
+                }
+            }
+            if (counter == 5){
+                val suitList = mutableListOf(
+                    player.hand.first.suit,
+                    player.hand.second.suit,
+                    this.cardsOnTable[0]!!.suit,
+                    this.cardsOnTable[1]!!.suit,
+                    this.cardsOnTable[2]!!.suit,
+                    this.cardsOnTable[3]!!.suit,
+                    this.cardsOnTable[4]!!.suit
+                )
+                list.sort()
+                var counterSuit = 1
+                for (i in 0 until suitList.size - 1){
+                    if (counterSuit == 5) return Pair(true, if (player.hand.first.rank.getCardRank() > player.hand.second.rank.getCardRank()) player.hand.first.rank.getCardRank() else player.hand.second.rank.getCardRank())
+                    if (suitList[i] == suitList[i + 1]) counterSuit++
                 }
             }
         }
