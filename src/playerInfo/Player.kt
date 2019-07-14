@@ -17,7 +17,6 @@ open class Player {
     }
     fun saveBalance(){
         File("D:/Poker/src/playerInfo/PlayerBalance.txt").writeText(balance.toString())
-
     }
     open fun placeBet(table: Table){
         println("Place your bet. For check place 0$. To pass type PASS")

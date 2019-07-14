@@ -3,8 +3,6 @@ import java.util.*
 import table.*
 import java.lang.Exception
 
-const val ZERO = '0'
-
 fun main(){
     do{
         greetings()
