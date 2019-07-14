@@ -39,11 +39,12 @@ fun playGame() {
     table.defineWinner(player, computer)
 
     player.saveBalance()
+
 }
 
 fun gameStats(player: Player, computer: Computer, table: Table) {
     println("""
-        Your hand: ${if (player.hand.first.rank == '1') "${player.hand.first.rank}0" else player.hand.first.rank}${player.hand.first.suit} ${if (player.hand.second.rank == '1') "${player.hand.second.rank}0" else player.hand.second.rank}${player.hand.second.suit}
+        Your hand: ${player.hand.first.rank.getRankName()}${player.hand.first.suit} ${player.hand.second.rank.getRankName()}${player.hand.second.suit}
         Your balance is: ${player.balance} Computer balance is: ${computer.balance}
         Total bet is: ${table.totalBet}
     """.trimIndent())
