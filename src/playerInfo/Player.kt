@@ -10,14 +10,13 @@ const val DEFAULT_COMPUTER_MONEY = 1000
 
 open class Player {
     open var balance = getSavedBalance()
-    open var hand = Pair(Card(), Card())
-
+    open var hand = Pair(first = Card(),second =  Card())
     private fun getSavedBalance(): Int{
-        val reader = File("D:/Kotlin_Projects/src/playerInfo/PlayerBalance.txt").bufferedReader()
+        val reader = File("D:/Poker/src/playerInfo/PlayerBalance.txt").bufferedReader()
         return reader.readLine().toInt()
     }
     fun saveBalance(){
-        File("D:/Kotlin_Projects/src/playerInfo/PlayerBalance.txt").writeText(balance.toString())
+        File("D:/Poker/src/playerInfo/PlayerBalance.txt").writeText(balance.toString())
 
     }
     open fun placeBet(table: Table){

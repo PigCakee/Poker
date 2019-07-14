@@ -12,6 +12,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
         for (i in 0 until cardNumber) {
             print(cardsOnTable[i]?.rank)
             print(cardsOnTable[i]?.suit)
+            print(" ")
         }
         println("\n-------------------------")
     }

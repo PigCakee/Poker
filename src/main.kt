@@ -18,25 +18,21 @@ fun playGame() {
 
     //First circle
     gameStats(player, computer, table)
-    player.placeBet(table)
-    computer.placeBet(table)
+    player.placeBet(table); computer.placeBet(table)
     table.openCard(1)
     table.openCard(2)
     table.openCard(3)
     //Second circle
     gameStats(player, computer, table)
-    player.placeBet(table)
-    computer.placeBet(table)
+    player.placeBet(table); computer.placeBet(table)
     table.openCard(4)
     //Fourth circle
     gameStats(player, computer, table)
-    computer.placeBet(table)
-    player.placeBet(table)
+    player.placeBet(table); computer.placeBet(table)
     table.openCard(5)
     //Fifth circle
     gameStats(player, computer, table)
-    computer.placeBet(table)
-    player.placeBet(table)
+    player.placeBet(table); computer.placeBet(table)
 
     table.defineWinner(player, computer)
 
@@ -45,8 +41,8 @@ fun playGame() {
 
 fun gameStats(player: Player, computer: Computer, table: Table) {
     println("""
-        Your balance is: ${player.balance}
-        Computer balance is: ${computer.balance}
+        Your hand: ${player.hand.first.rank}${player.hand.first.suit} ${player.hand.second.rank}${player.hand.second.suit}
+        Your balance is: ${player.balance} Computer balance is: ${computer.balance}
         Total bet is: ${table.totalBet}
     """.trimIndent())
 }
