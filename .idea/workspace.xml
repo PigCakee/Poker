@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98ef8849-60b8-4f00-8dba-05ee841356ea" name="Default Changelist" comment="Fixed player's hand">
+    <list default="true" id="98ef8849-60b8-4f00-8dba-05ee841356ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kotlin_Projects/playerInfo/PlayerBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kotlin_Projects/playerInfo/PlayerBalance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playerInfo/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/playerInfo/Player.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Kotlin_Projects/META-INF/Kotlin_Projects.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kotlin_Projects/META-INF/Kotlin_Projects.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table/Table.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Table.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="315">
+              <caret line="45" column="256" selection-start-line="45" selection-start-column="256" selection-end-line="45" selection-end-column="256" />
               <folding>
                 <element signature="e#0#80#0" expanded="true" />
               </folding>
@@ -33,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/playerInfo/Player.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+            <state relative-caret-position="231">
+              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
                 <element signature="e#20#128#0" expanded="true" />
               </folding>
@@ -45,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/table/Card.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="320">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -57,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/table/Table.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="341">
+              <caret line="142" column="23" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -91,11 +88,11 @@
         <option value="$PROJECT_DIR$/src/PlayerInfo/BalanceInfo" />
         <option value="$PROJECT_DIR$/src/PlayerInfo/Player.kt" />
         <option value="$PROJECT_DIR$/src/playerInfo/BalanceInfo" />
-        <option value="$PROJECT_DIR$/src/table/Card.kt" />
         <option value="$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt" />
-        <option value="$PROJECT_DIR$/src/table/Table.kt" />
         <option value="$PROJECT_DIR$/src/playerInfo/Player.kt" />
         <option value="$PROJECT_DIR$/src/main.kt" />
+        <option value="$PROJECT_DIR$/src/table/Table.kt" />
+        <option value="$PROJECT_DIR$/src/table/Card.kt" />
       </list>
     </option>
   </component>
@@ -194,12 +191,27 @@
       <workItem from="1562943424301" duration="15537000" />
       <workItem from="1562999705385" duration="20000" />
       <workItem from="1563113514432" duration="764000" />
-      <workItem from="1563114416194" duration="881000" />
+      <workItem from="1563114416194" duration="7141000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed player's hand">
+      <created>1563115310215</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563115310216</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed &quot;10's&quot;, added some win combinations.">
+      <created>1563118376172</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563118376172</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17202000" />
+    <option name="totallyTimeSpent" value="23462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,6 +224,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15369128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -222,17 +235,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25977653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25139666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.13826816" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.20111732" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -249,7 +262,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed player's hand" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed player's hand" />
+    <MESSAGE value="Fixed &quot;10's&quot;, added some win combinations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed &quot;10's&quot;, added some win combinations." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/TestClass.kt" />
@@ -257,17 +271,20 @@
     <entry file="file://$PROJECT_DIR$/src/playerInfo/BalanceInfo.txt" />
     <entry file="file://$PROJECT_DIR$/BalanceInfo.txt" />
     <entry file="file://$PROJECT_DIR$/PlayerBalance.txt" />
-    <entry file="file://$PROJECT_DIR$/src/table/Card.kt">
+    <entry file="file://$PROJECT_DIR$/src/playerInfo/Player.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        <state relative-caret-position="231">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#20#128#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="315">
+          <caret line="45" column="256" selection-start-line="45" selection-start-column="256" selection-end-line="45" selection-end-column="256" />
           <folding>
             <element signature="e#0#80#0" expanded="true" />
           </folding>
@@ -283,18 +300,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/Table.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="341">
+          <caret line="142" column="23" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/playerInfo/Player.kt">
+    <entry file="file://$PROJECT_DIR$/src/table/Card.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding>
-            <element signature="e#20#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

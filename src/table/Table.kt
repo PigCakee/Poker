@@ -23,25 +23,25 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
 
     }
 
-    fun <T> isPair(player: T): Boolean{
+    fun <T> isPair(player: T): Pair<Boolean,Char?>{
         if (player is Player){
-            if (player.hand.first.rank == player.hand.second.rank) return true
+            if (player.hand.first.rank == player.hand.second.rank) return Pair(true, player.hand.first.rank)
             for (i in 0 until this.cardsOnTable.size){
-                if (player.hand.first.rank == this.cardsOnTable[i]?.rank
-                    || player.hand.second.rank == this.cardsOnTable[i]?.rank) return true
+                if (player.hand.first.rank == this.cardsOnTable[i]?.rank) return Pair(true, player.hand.first.rank)
+                if (player.hand.second.rank == this.cardsOnTable[i]?.rank) return Pair(true, player.hand.second.rank)
             }
         }
         if (player is Computer){
-            if (player.hand.first.rank == player.hand.second.rank) return true
+            if (player.hand.first.rank == player.hand.second.rank) return Pair(true, player.hand.first.rank)
             for (i in 0 until this.cardsOnTable.size){
-                if (player.hand.first.rank == this.cardsOnTable[i]?.rank
-                    || player.hand.second.rank == this.cardsOnTable[i]?.rank) return true
+                if (player.hand.first.rank == this.cardsOnTable[i]?.rank) return Pair(true, player.hand.first.rank)
+                if (player.hand.second.rank == this.cardsOnTable[i]?.rank) return Pair(true, player.hand.second.rank)
             }
         }
-        return false
+        return Pair(false, null)
     }
 
-    fun <T> isThreeOfAKind(player: T): Boolean{
+    fun <T> isThreeOfAKind(player: T): Pair<Boolean,Char?>{
         if (player is Player){
             val list = mutableListOf(player.hand.first.rank,
                 player.hand.second.rank,
@@ -53,7 +53,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
             list.sort()
             var result = 1
             for (i in 0 until list.size - 1){
-                if (result == 3) return true
+                if (result == 3) return Pair(true, this.cardsOnTable[i]?.rank)
                 if (list[i] == list[i + 1]) result++
                 else result = 1
             }
@@ -69,15 +69,15 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
             list.sort()
             var result = 1
             for (i in 0 until list.size - 1){
-                if (result == 3) return true
+                if (result == 3) return Pair(true, this.cardsOnTable[i]?.rank)
                 if (list[i] == list[i + 1]) result++
                 else result = 1
             }
         }
-        return false
+        return Pair(false, null)
     }
 
-    fun <T> isFourOfAKind(player: T): Boolean{
+    fun <T> isFourOfAKind(player: T): Pair<Boolean,Char?>{
         if (player is Player){
             val list = mutableListOf(player.hand.first.rank,
                 player.hand.second.rank,
@@ -89,7 +89,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
             list.sort()
             var result = 1
             for (i in 0 until list.size - 1){
-                if (result == 4) return true
+                if (result == 4) return Pair(true, this.cardsOnTable[i]?.rank)
                 if (list[i] == list[i + 1]) result++
                 else result = 1
             }
@@ -105,12 +105,12 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
             list.sort()
             var result = 1
             for (i in 0 until list.size - 1){
-                if (result == 4) return true
+                if (result == 4) return Pair(true, this.cardsOnTable[i]?.rank)
                 if (list[i] == list[i + 1]) result++
                 else result = 1
             }
         }
-        return false
+        return Pair(false, null)
     }
 
     fun <T> highestCardInHand(player: T): Int{
@@ -130,14 +130,22 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
         return highestCard
     }
 
-    fun <T> isTwoPairs(player: T): Boolean{
+    fun <T> isTwoPairs(player: T): Pair<Boolean, Char?>{
+        var highestRank = ' '
         if (player is Player){
-
+            val list = mutableListOf(player.hand.first.rank,
+                player.hand.second.rank,
+                this.cardsOnTable[0]!!.rank,
+                this.cardsOnTable[1]!!.rank,
+                this.cardsOnTable[2]!!.rank,
+                this.cardsOnTable[3]!!.rank,
+                this.cardsOnTable[4]!!.rank)
+            list.sort()
         }
         if (player is Computer){
 
         }
-        return false
+        return Pair(false, null)
     }
 }
 
