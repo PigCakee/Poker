@@ -1,7 +1,6 @@
 package table
 
 class Card {
-
     var rank: Rank = when ((2..14).random()) {
         2 -> Rank.TWO
         3 -> Rank.THREE
@@ -18,7 +17,6 @@ class Card {
         14 -> Rank.ACE
         else -> throw Exception("Error in rank system")
     }
-
     val suit: Char = when ((1..4).random()){
         1 -> 'S'
         2 -> 'H'
@@ -47,11 +45,4 @@ class Card {
             else -> throw Exception("Error in rank name system")
         }
     }
-
-}
-
-
-
-fun isValid(){
-
 }
