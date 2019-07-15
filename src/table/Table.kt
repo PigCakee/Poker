@@ -149,7 +149,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
             list.sort()
             var result = 1
             for (i in 0 until list.size - 1){
-                if (result == 4) return Pair(true, this.cardsOnTable[i]?.rank?.getCardRank())
+                if (result == 4) return Pair(true, list[i])
                 if (list[i] == list[i + 1]) result++
                 else result = 1
             }
@@ -165,7 +165,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
             list.sort()
             var result = 1
             for (i in 0 until list.size - 1){
-                if (result == 4) return Pair(true, this.cardsOnTable[i]?.rank?.getCardRank())
+                if (result == 4) return Pair(true, list[i])
                 if (list[i] == list[i + 1]) result++
                 else result = 1
             }

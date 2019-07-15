@@ -18,10 +18,10 @@ class Card {
         else -> throw Exception("Error in rank system")
     }
     val suit: Char = when ((1..4).random()){
-        1 -> 'S'
-        2 -> 'H'
-        3 -> 'D'
-        4 -> 'C'
+        1 -> '♠'
+        2 -> '♥'
+        3 -> '♦'
+        4 -> '♣'
         else -> throw Exception ("Error with generating suit")
     }
     enum class Rank (var rank: Int){
@@ -45,4 +45,8 @@ class Card {
             else -> throw Exception("Error in rank name system")
         }
     }
+}
+
+fun isValid(): Boolean{
+    TODO(reason = "Check if there is already such card on table or in hand")
 }

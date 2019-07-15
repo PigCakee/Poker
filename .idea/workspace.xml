@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ef8849-60b8-4f00-8dba-05ee841356ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_JUnit_Release.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotlin_Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Kotlin_Projects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Kotlin_Projects/META-INF/Kotlin_Projects.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kotlin_Projects/META-INF/Kotlin_Projects.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Kotlin_Projects/playerInfo/PlayerBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kotlin_Projects/playerInfo/PlayerBalance.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Card.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table/Table.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/Table.kt" afterDir="false" />
@@ -23,10 +27,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="51" column="180" selection-start-line="51" selection-start-column="180" selection-end-line="51" selection-end-column="180" />
+            <state relative-caret-position="100">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="e#0#80#0" expanded="true" />
+                <element signature="n#!!block;n#main#0" />
+                <element signature="n#!!block;n#playGame#0" />
+                <element signature="n#!!block;n#gameStats#0" />
                 <element signature="n#!!block;n#greetings#0" />
                 <element signature="n#!!block;n#playAgain#0" />
               </folding>
@@ -34,15 +41,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/playerInfo/Player.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="200">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="e#20#128#0" expanded="true" />
+                <element signature="n#!!block;n#Player#0" />
                 <element signature="n#!!block;n#saveBalance#0;n#!!block;n#Player#0" />
                 <element signature="n#!!block;n#placeBet#0;n#!!block;n#Player#0" />
+                <element signature="n#!!block;n#Computer#0" />
               </folding>
             </state>
           </provider>
@@ -51,21 +60,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/table/Card.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="609">
+              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#Rank#0;n#!!block;n#Card#0" />
+                <element signature="n#!!block;n#isValid#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/table/Table.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="58" column="64" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+            <state relative-caret-position="640">
+              <caret line="139" column="64" selection-start-line="139" selection-start-column="64" selection-end-line="139" selection-end-column="64" />
               <folding>
+                <element signature="e#159#237#0" />
                 <element signature="n#!!block;n#openCard#0;n#!!block;n#Table#0" />
                 <element signature="n#!!block;n#defineWinner#0;n#!!block;n#Table#0" />
                 <element signature="n#!!block;n#awardWinner#0;n#!!block;n#Table#0" />
@@ -90,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -101,6 +112,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Arquillian JUnit Test Class" />
       </list>
     </option>
   </component>
@@ -123,6 +135,7 @@
         <option value="$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt" />
         <option value="$PROJECT_DIR$/src/table/Card.kt" />
         <option value="$PROJECT_DIR$/src/main.kt" />
+        <option value="$PROJECT_DIR$/src/MainKtTest.kt" />
         <option value="$PROJECT_DIR$/src/table/Table.kt" />
       </list>
     </option>
@@ -179,14 +192,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="PlayerInfo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -236,7 +257,7 @@
       <workItem from="1563113514432" duration="764000" />
       <workItem from="1563114416194" duration="18160000" />
       <workItem from="1563187518434" duration="1009000" />
-      <workItem from="1563216303436" duration="3154000" />
+      <workItem from="1563216303436" duration="4878000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed player's hand">
       <created>1563115310215</created>
@@ -277,7 +298,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38644000" />
+    <option name="totallyTimeSpent" value="40368000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,7 +322,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25139666" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25139666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -351,24 +372,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/playerInfo/Player.kt">
+    <entry file="file://$PROJECT_DIR$/src/MainKtTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="215">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
-            <element signature="e#20#128#0" expanded="true" />
-            <element signature="n#!!block;n#saveBalance#0;n#!!block;n#Player#0" />
-            <element signature="n#!!block;n#placeBet#0;n#!!block;n#Player#0" />
+            <element signature="e#0#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+            <element signature="n#!!block;n#main#0" />
+            <element signature="n#!!block;n#playGame#0" />
+            <element signature="n#!!block;n#gameStats#0" />
+            <element signature="n#!!block;n#greetings#0" />
+            <element signature="n#!!block;n#playAgain#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/Card.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="609">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#Rank#0;n#!!block;n#Card#0" />
+            <element signature="n#!!block;n#isValid#0" />
           </folding>
         </state>
       </provider>
@@ -376,27 +411,16 @@
     <entry file="file://$PROJECT_DIR$/src/playerInfo/PlayerBalance.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="51" column="180" selection-start-line="51" selection-start-column="180" selection-end-line="51" selection-end-column="180" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-            <element signature="n#!!block;n#greetings#0" />
-            <element signature="n#!!block;n#playAgain#0" />
-          </folding>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/Table.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="58" column="64" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+        <state relative-caret-position="640">
+          <caret line="139" column="64" selection-start-line="139" selection-start-column="64" selection-end-line="139" selection-end-column="64" />
           <folding>
+            <element signature="e#159#237#0" />
             <element signature="n#!!block;n#openCard#0;n#!!block;n#Table#0" />
             <element signature="n#!!block;n#defineWinner#0;n#!!block;n#Table#0" />
             <element signature="n#!!block;n#awardWinner#0;n#!!block;n#Table#0" />
@@ -412,6 +436,20 @@
             <element signature="n#!!block;n#isStraight#0;n#!!block;n#Table#0" />
             <element signature="n#!!block;n#isFlush#0;n#!!block;n#Table#0" />
             <element signature="n#!!block;n#isStraightFlush#0;n#!!block;n#Table#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/playerInfo/Player.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#20#128#0" expanded="true" />
+            <element signature="n#!!block;n#Player#0" />
+            <element signature="n#!!block;n#saveBalance#0;n#!!block;n#Player#0" />
+            <element signature="n#!!block;n#placeBet#0;n#!!block;n#Player#0" />
+            <element signature="n#!!block;n#Computer#0" />
           </folding>
         </state>
       </provider>
