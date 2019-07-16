@@ -14,7 +14,6 @@ fun playGame() {
     val player = Player()
     val computer = Computer()
     val table = Table()
-    computer.balance = DEFAULT_COMPUTER_MONEY
 
     ////////////////First circle////////////////////
     gameStats(player, computer, table)
@@ -43,6 +42,7 @@ fun playGame() {
     table.defineWinner(player, computer)
 
     player.saveBalance()
+    computer.saveBalance()
 }
 
 fun gameStats(player: Player, computer: Computer, table: Table) {

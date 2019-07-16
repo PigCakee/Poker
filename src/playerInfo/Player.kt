@@ -6,17 +6,17 @@ import java.io.File
 import java.util.*
 import kotlin.system.exitProcess
 
-const val DEFAULT_COMPUTER_MONEY = 1000
+//const val DEFAULT_COMPUTER_MONEY = 7777
 
 open class Player {
     open var balance = getSavedBalance()
     open var hand = Pair(first = Card(),second = Card())
-    private fun getSavedBalance(): Int{
+    protected open fun getSavedBalance(): Int{
         val reader = File("D:/Poker/src/playerInfo/PlayerBalance.txt").bufferedReader()
         return reader.readLine().toInt()
     }
-    fun saveBalance(){
-        File("D:/Poker/src/playerInfo/PlayerBalance.txt").writeText(balance.toString())
+    open fun saveBalance(){
+        File("D:/Poker/src/playerInfo/PlayerBalance.txt").writeText(this.balance.toString())
     }
     open fun placeBet(table: Table){
         println("Place your bet. For check place 0$. To pass type PASS")
@@ -40,13 +40,60 @@ open class Player {
 }
 
 class Computer: Player(){
-    override var balance: Int
-        get() = DEFAULT_COMPUTER_MONEY
-        set(value) {}
+    override var balance = getSavedBalance()
     override var hand: Pair<Card, Card>
         get() = super.hand
         set(value) {}
+    @Throws(Exception::class)
+    override fun getSavedBalance(): Int{
+        val reader = File("D:/Poker/src/playerInfo/ComputerBalance.txt").bufferedReader()
+        return reader.readLine().toInt()
+    }
+    override fun saveBalance(){
+        File("D:/Poker/src/playerInfo/ComputerBalance.txt").writeText(this.balance.toString())
+    }
     override fun placeBet(table: Table){
-        println("Computer placed: ")
+        var bet = 0
+        val score = table.checkPlayersScore(player = this).first
+        val percentRate = when (score) {
+            1 -> {
+                (10..30).random()
+            }
+            2 -> {
+                (10..40).random()
+            }
+            3 -> {
+                (10..50).random()
+            }
+            4 -> {
+                (10..60).random()
+            }
+            5 -> {
+                (10..70).random()
+            }
+            6 -> {
+                (10..80).random()
+            }
+            7 -> {
+                (10..90).random()
+            }
+            8 -> {
+                (10..100).random()
+            }
+            else -> {
+                0
+            }
+        }
+
+        bet = (this.balance * (percentRate * 0.01)).toInt()
+
+        when ((1..3).random()){
+            1 -> bet = 0
+        }
+
+        this.balance -= bet
+        this.saveBalance()
+        table.totalBet += bet
+        println("Computer placed: $bet")
     }
 }

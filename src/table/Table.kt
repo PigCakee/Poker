@@ -56,7 +56,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
         computer.balance += this.totalBet / 2
     }
 
-    private fun <T> checkPlayersScore(player: T): Pair<Int, Int>{
+    fun <T> checkPlayersScore(player: T): Pair<Int, Int>{
         var playerHighestCard: Int
         if (player is Player){
             playerHighestCard = highestCardInHand(player)!!
