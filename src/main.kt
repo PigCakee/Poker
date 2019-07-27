@@ -15,6 +15,9 @@ fun playGame() {
     val computer = Computer()
     val table = Table()
 
+    while (!table.isValid()) { table.genNewTable() }
+    while (!isValidHands(player, computer, table)) genNewHands(player, computer)
+
     ////////////////First circle////////////////////
     gameStats(player, computer, table)
     player.placeBet(table); computer.placeBet(table)

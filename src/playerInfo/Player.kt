@@ -97,3 +97,24 @@ class Computer: Player(){
         println("Computer placed: $bet")
     }
 }
+
+fun isValidHands(player: Player, computer: Computer, table: Table): Boolean{
+    val listOfCards =
+        listOf<Card>(player.hand.first, player.hand.second,
+            computer.hand.first, computer.hand.second,
+            table.cardsOnTable.elementAt(0)!!, table.cardsOnTable.elementAt(1)!!,
+            table.cardsOnTable.elementAt(2)!!, table.cardsOnTable.elementAt(3)!!,
+            table.cardsOnTable.elementAt(4)!!
+        )
+    for (i in 0 until listOfCards.size - 1){
+        for (j in i + 1 until listOfCards.size - 1){
+            if (listOfCards[i].rank == listOfCards[j].rank && listOfCards[i].suit == listOfCards[j].suit) return false
+        }
+    }
+    return true
+}
+
+fun genNewHands(player: Player, computer: Computer){
+    player.hand = Pair(first = Card(),second = Card())
+    computer.hand = Pair(first = Card(),second = Card())
+}

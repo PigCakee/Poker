@@ -16,6 +16,19 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
          cardsOnTable = listOf(Card(), Card(), Card(), Card(), Card())
     }
 
+    fun isValid(): Boolean{
+        for (i in 0 until cardsOnTable.size - 1){
+            for (j in i + 1 until cardsOnTable.size - 1){
+                if (cardsOnTable[i]!!.rank == cardsOnTable[j]!!.rank && cardsOnTable[i]!!.suit == cardsOnTable[j]!!.suit) return false
+            }
+        }
+        return true
+    }
+
+    fun genNewTable(){
+        cardsOnTable = listOf(Card(), Card(), Card(), Card(), Card())
+    }
+
     fun openCard(cardNumber: Int){
         println("-------------------------")
         for (i in 0 until cardNumber) {
