@@ -59,7 +59,7 @@ class Table (var cardsOnTable: List<Card?> = listOf(Card(), Card(), Card(), Card
     }
 
     private fun awardComputer(computer: Computer){
-        println("You lost $totalBet$. Better luck next time!")
+        println("You lost $totalBet$. Computer's hand is ${computer.hand.first.rank.getRankName()}${computer.hand.first.suit} ${computer.hand.second.rank.getRankName()}${computer.hand.second.suit} Better luck next time!")
         computer.balance += this.totalBet
     }
 

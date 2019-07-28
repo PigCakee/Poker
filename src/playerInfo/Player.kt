@@ -6,7 +6,10 @@ import java.io.File
 import java.util.*
 import kotlin.system.exitProcess
 
-//const val DEFAULT_COMPUTER_MONEY = 7777
+const val CALL_NUMBER = 777
+const val PASS_NUMBER = 999
+const val PLAYERS_TURN = 1
+const val COMPUTERS_TURN = 0
 
 open class Player {
     open var balance = getSavedBalance()
@@ -18,22 +21,24 @@ open class Player {
     open fun saveBalance(){
         File("D:/Poker/src/playerInfo/PlayerBalance.txt").writeText(this.balance.toString())
     }
-    open fun placeBet(table: Table){
-        println("Place your bet. For check place 0$. To pass type PASS")
+    open fun placeBet(): String{
         val input = Scanner(System.`in`)
         val amount = input.nextLine()
         when (amount){
-            "0" -> println("Check.")
+            "Check" -> {
+                println("Check.")
+                return "Check"
+            }
             "PASS" -> {
-                println("Pass.")
-                this.saveBalance()
-                exitProcess(1)
+                println("You passed.")
+                return "PASS"
+            }
+            "Call" -> {
+                println("You called.")
+                return "Call"
             }
             else -> {
-                println(amount.toInt())
-                table.totalBet += amount.toInt()
-                this.balance -= amount.toInt()
-                println("Placed $amount$.")
+                return amount
             }
         }
     }
@@ -52,8 +57,7 @@ class Computer: Player(){
     override fun saveBalance(){
         File("D:/Poker/src/playerInfo/ComputerBalance.txt").writeText(this.balance.toString())
     }
-    override fun placeBet(table: Table){
-        var bet = 0
+    fun placeBet(table: Table, player: Player): String{
         val score = table.checkPlayersScore(player = this).first
         val percentRate = when (score) {
             1 -> {
@@ -85,16 +89,17 @@ class Computer: Player(){
             }
         }
 
-        bet = (this.balance * (percentRate * 0.01)).toInt()
+        var bet = (this.balance * (percentRate * 0.01)).toInt()
 
-        when ((1..3).random()){
+        when ((1..7).random()){
             1 -> bet = 0
+            3 -> bet = CALL_NUMBER
+            5 -> bet = PASS_NUMBER
         }
-
-        this.balance -= bet
-        this.saveBalance()
-        table.totalBet += bet
-        println("Computer placed: $bet")
+        when ((1..10).random()){
+            1 -> bet = getSavedBalance()
+        }
+        return bet.toString()
     }
 }
 
